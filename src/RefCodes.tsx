@@ -100,6 +100,9 @@ const RefCodeCopyButton = styled.button`
   color: white;
   cursor: pointer;
   position: relative;
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 const RefCode = styled.div`
