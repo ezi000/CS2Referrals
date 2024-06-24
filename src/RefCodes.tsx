@@ -116,9 +116,9 @@ const RefCode = styled.div`
 
 const RefDescription = styled.div`
   background-color: #111;
-  width: 100%;
+  width: calc(100% - 1rem);
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   border: 1px solid green;
 `;
 
