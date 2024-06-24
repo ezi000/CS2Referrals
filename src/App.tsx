@@ -11,7 +11,7 @@ function App() {
 }
 
 const Body = styled.div`
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   color: white;
   background-image: url("/background.jpg");
   background-repeat: no-repeat;
