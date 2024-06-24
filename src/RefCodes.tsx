@@ -1,4 +1,3 @@
-import React from "react";
 import RefCodesArray from "./RefCodesArray";
 import styled from "styled-components";
 const RefCodes = () => {
@@ -16,7 +15,6 @@ const RefCodes = () => {
                 <RefCode>
                   <RefCodeCopyButton
                     onClick={() => {
-                      console.log(refCard.code);
                       navigator.clipboard.writeText(refCard.code);
                     }}
                   >
