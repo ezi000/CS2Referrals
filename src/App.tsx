@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import { Logo } from "./Logo";
 import RefCodes from "./RefCodes";
 function App() {
   return (
     <>
       <Body>
-        <Logo />
         <RefCodes />
       </Body>
     </>
@@ -13,6 +11,8 @@ function App() {
 }
 
 const Body = styled.div`
+  font-family: "Roboto", sans-serif;
+  color: white;
   background-image: url("/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
