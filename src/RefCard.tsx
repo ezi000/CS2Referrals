@@ -109,7 +109,8 @@ const RefCodeCopyButton = styled.button`
   cursor: pointer;
   position: relative;
   &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    background-color: #3333332b;
   }
 `;
 
