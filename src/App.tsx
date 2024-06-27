@@ -13,7 +13,7 @@ function App() {
 const Body = styled.div`
   font-family: "Lato", sans-serif;
   color: white;
-  background-image: url("/background.jpg");
+  background-image: url("/background2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

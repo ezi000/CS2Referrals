@@ -1,148 +1,95 @@
 import RefCodesArray from "./RefCodesArray";
 import styled from "styled-components";
-import { useState } from "react";
+import RefCard from "./RefCard";
+
+type GroupedRefCards = {
+  [key: string]: RefCard[];
+};
+type CategoryHeaders = {
+  [key: string]: string;
+};
+
+type RefCard = {
+  code: string;
+  category: string;
+  description: string;
+  img: string;
+};
 
 const RefCodes = () => {
-  const [visibleTooltip, setVisibleTooltip] = useState<string | null>(null);
+  const groupedRefCards: GroupedRefCards = RefCodesArray.reduce(
+    (acc: GroupedRefCards, refCard: RefCard) => {
+      if (!acc[refCard.category]) {
+        acc[refCard.category] = [];
+      }
+      acc[refCard.category].push(refCard);
+      return acc;
+    },
+    {}
+  );
 
-  const handleCopyClick = (code: string, index: number) => {
-    navigator.clipboard.writeText(code);
-    setVisibleTooltip(index.toString());
-    setTimeout(() => {
-      setVisibleTooltip(null);
-    }, 1000);
+  const categoryHeaders: CategoryHeaders = {
+    gambling: "🎲 GAMBLE 🎲",
+    trading: "🔄 TRADE SKINS 🔄",
+    cases: "📦 OPEN CASES 📦",
+    selling: "💰 SELL SKINS 💰",
+    other: "🌐 OTHER SITES 🌐",
   };
 
   return (
-    <RefCardsBody>
-      {RefCodesArray.map((refCard, index) => (
-        <RefCard key={index}>
-          <RefSiteImgDiv>
-            <RefSiteImg src={refCard.img} alt="refsite" />
-          </RefSiteImgDiv>
-          <RefandCode>
-            <RefDescription>{refCard.description}</RefDescription>
-            <RefCode>
-              <RefCodeCopyButton
-                onClick={() => handleCopyClick(refCard.code, index)}
-              >
-                {refCard.code}
-                <ButtonLabel>Click to copy</ButtonLabel>
-              </RefCodeCopyButton>
-              {visibleTooltip === index.toString() && (
-                <Tooltip>Code copied</Tooltip>
-              )}
-            </RefCode>
-          </RefandCode>
-        </RefCard>
+    <>
+      {Object.keys(groupedRefCards).map((category, index) => (
+        <Body key={index}>
+          <SiteCategoryHeader>{categoryHeaders[category]}</SiteCategoryHeader>
+          <RefCardsBody>
+            {groupedRefCards[category].map((refCard, index) => (
+              <RefCard key={index} index={index} refCard={refCard} />
+            ))}
+          </RefCardsBody>
+        </Body>
       ))}
-    </RefCardsBody>
+    </>
   );
 };
 
-const ButtonLabel = styled.div`
-  position: absolute;
-  background-color: #222;
-  font-weight: bold;
-  top: 0;
-  font-size: 0.8rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
-
-const Tooltip = styled.div`
-  position: absolute;
-  background-color: #555;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  top: -40%;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  z-index: 99;
-  opacity: 1;
-  transition: opacity 0.3s;
-`;
-
-const RefSiteImgDiv = styled.div`
-  width: 100%;
-  height: 8rem;
+const Body = styled.div`
+  margin-top: 3rem;
+  width: 80%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const RefSiteImg = styled.img`
-  max-width: 90%;
-  max-height: 100%;
-  margin: auto;
-`;
-
-const RefandCode = styled.div`
-  display: flex;
-  width: 100%;
-  height: 50%;
   flex-direction: column;
   align-items: center;
-  border-right: 1px solid green;
-  border-left: 1px solid green;
-  border-radius: 1rem;
-`;
-
-const RefCodeCopyButton = styled.button`
-  background-color: #222;
-  border: 1px dashed orange;
-  border-radius: 1rem;
-  justify-self: center;
-  width: 90%;
-  height: 80%;
-  color: white;
-  cursor: pointer;
-  position: relative;
-  &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-`;
-
-const RefCode = styled.div`
-  width: 100%;
-  height: 5rem;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
 `;
 
-const RefDescription = styled.div`
-  background-color: #111;
-  width: calc(100% - 1rem);
+const SiteCategoryHeader = styled.h1`
+  color: white;
+  font-size: 3rem;
+  margin: 0;
   text-align: center;
-  padding: 0.5rem;
-  border: 1px solid green;
+  font-weight: 800;
 `;
-
 const RefCardsBody = styled.div`
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  align-items: flex-start;
-  width: 60%;
-  @media screen and (max-width: 716px) {
-    width: 90%;
-  }
-`;
+  justify-content: center;
+  align-items: start;
+  max-width: 1200px;
+  width: 100%;
 
-const RefCard = styled.div`
-  background-color: #222;
-  border-bottom: 1px solid green;
-  border-radius: 1rem;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @media screen and (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;
 
 export default RefCodes;
