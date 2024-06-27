@@ -73,7 +73,8 @@ const RefCardsBody = styled.div`
   margin-bottom: 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  column-gap: 2rem;
+  row-gap: 1rem;
   justify-content: center;
   align-items: start;
   max-width: 1200px;

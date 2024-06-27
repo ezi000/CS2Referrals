@@ -93,8 +93,8 @@ const RefandCode = styled.div`
   height: 50%;
   flex-direction: column;
   align-items: center;
-  border-right: 1px solid lightblue;
-  border-left: 1px solid lightblue;
+  /* border-right: 1px solid rgba(0, 255, 255, 0.7);
+  border-left: 1px solid rgba(0, 255, 255, 0.7); */
   border-radius: 1rem;
 `;
 
@@ -128,17 +128,19 @@ const RefDescription = styled.div`
   width: calc(100% - 1rem);
   text-align: center;
   padding: 0.5rem;
-  border: 1px solid lightblue;
+  border: 1px solid rgba(0, 255, 255, 0.7);
 `;
 
 const Card = styled.div`
   background-color: #222;
-  border-bottom: 1px solid lightblue;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.7);
   border-radius: 1rem;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  //
+  box-shadow: 0px 2px 8px 0px rgba(0, 255, 255, 0.7);
 `;
 
 export default RefCard;
