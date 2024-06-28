@@ -1,78 +1,138 @@
+import { useState } from "react";
 import styled from "styled-components";
-import { Button, Stack } from "@mui/material";
+import {
+  Button,
+  Stack,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import { HashLink as Link } from "react-router-hash-link";
 
 export const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDrawer =
+    (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
+      setIsOpen(open);
+    };
+
+  const navItems = [
+    { to: "#cases", label: "CASES" },
+    { to: "#market", label: "BUY & SELL SKINS" },
+    { to: "#trading", label: "TRADE" },
+    { to: "#selling", label: "CASH-OUT SKINS" },
+    { to: "#gambling", label: "GAMBLE" },
+    { to: "#other", label: "OTHER" },
+  ];
+
   return (
     <>
       <Nav>
         <StyledNavBar>
-          <Stack direction="row" spacing={2}>
-            <Link
-              to="#cases"
-              scroll={(el) =>
-                el.scrollIntoView({ behavior: "smooth", block: "center" })
-              }
+          <HamburgerMenu>
+            <IconButton onClick={toggleDrawer(true)}>
+              <MenuIcon sx={{ color: "gray" }} />
+            </IconButton>
+            <StyledDrawer
+              anchor="top"
+              open={isOpen}
+              onClose={toggleDrawer(false)}
             >
-              <StyledButton variant="text">CASES</StyledButton>
-            </Link>
-            <Link
-              to="#market"
-              scroll={(el) =>
-                el.scrollIntoView({ behavior: "smooth", block: "center" })
-              }
-            >
-              <StyledButton variant="text">BUY & SELL SKINS</StyledButton>
-            </Link>
-            <Link
-              to="#trading"
-              scroll={(el) =>
-                el.scrollIntoView({ behavior: "smooth", block: "center" })
-              }
-            >
-              <StyledButton variant="text">TRADE</StyledButton>
-            </Link>
-            <Link
-              to="#selling"
-              scroll={(el) =>
-                el.scrollIntoView({ behavior: "smooth", block: "center" })
-              }
-            >
-              <StyledButton variant="text">Cash-out skins</StyledButton>
-            </Link>
-            <Link
-              to="#gambling"
-              scroll={(el) =>
-                el.scrollIntoView({ behavior: "smooth", block: "center" })
-              }
-            >
-              <StyledButton variant="text">GAMBLE</StyledButton>
-            </Link>
-            <Link
-              to="#other"
-              scroll={(el) =>
-                el.scrollIntoView({ behavior: "smooth", block: "center" })
-              }
-            >
-              <StyledButton variant="text">OTHER</StyledButton>
-            </Link>
-          </Stack>
+              <StyledList
+                onClick={toggleDrawer(false)}
+                onKeyDown={toggleDrawer(false)}
+              >
+                {navItems.map((item) => (
+                  <StyledListItem key={item.label}>
+                    <StyledLink
+                      to={item.to}
+                      scroll={(el) =>
+                        el.scrollIntoView({
+                          behavior: "smooth",
+                          block: "center",
+                        })
+                      }
+                    >
+                      <HamburguerMenuItems>{item.label}</HamburguerMenuItems>
+                    </StyledLink>
+                  </StyledListItem>
+                ))}
+              </StyledList>
+            </StyledDrawer>
+          </HamburgerMenu>
+          <DesktopMenu>
+            <Stack direction="row" spacing={2}>
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.to}
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "center" })
+                  }
+                >
+                  <StyledButton variant="text">{item.label}</StyledButton>
+                </Link>
+              ))}
+            </Stack>
+          </DesktopMenu>
         </StyledNavBar>
       </Nav>
     </>
   );
 };
 
+const HamburguerMenuItems = styled.div`
+  color: rgba(0, 255, 255, 0.7);
+  padding: 0.5rem;
+  font-family: "Lato", sans-serif;
+`;
+
 const Nav = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.5rem 0 0.5rem 0;
+  height: 3rem;
   position: fixed;
   width: 100vw;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   background-color: #1e1c1c;
+`;
+
+const StyledDrawer = styled(Drawer)`
+  .MuiPaper-root {
+    background-color: #1e1c1c;
+    z-index: 1;
+  }
+`;
+
+const StyledList = styled(List)`
+  && {
+    padding: 0;
+  }
+`;
+
+const StyledListItem = styled(ListItem)`
+  && {
+    padding: 0;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  display: block;
+  width: 100%;
+  text-decoration: none;
 `;
 
 const StyledNavBar = styled.div`
@@ -87,16 +147,26 @@ const StyledButton = styled(Button)`
   && {
     font-size: 1rem;
     font-weight: 600;
-    &.MuiButton-colorPrimary {
-      color: rgba(0, 255, 255, 0.7);
-      background-color: #1e1c1c;
-      &:hover {
-        background-color: #41404057;
-      }
+    color: rgba(0, 255, 255, 0.7);
+    background-color: #1e1c1c;
+    &:hover {
+      background-color: #41404057;
     }
     @media (max-width: 992px) {
-      width: fit-content;
-      font-size: 0.7rem;
+      font-size: 0.9rem;
     }
+  }
+`;
+
+const HamburgerMenu = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const DesktopMenu = styled.div`
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
