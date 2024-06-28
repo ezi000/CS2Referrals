@@ -1,8 +1,7 @@
-import { useState } from "react";
 import styled from "styled-components";
 
 type RefCardType = {
-  code: string;
+  codeURL: string;
   category: string;
   description: string;
   img: string;
@@ -15,16 +14,6 @@ export const RefCard = ({
   refCard: RefCardType;
   index: number;
 }) => {
-  const [visibleTooltip, setVisibleTooltip] = useState<string | null>(null);
-
-  const handleCopyClick = (code: string, index: number) => {
-    navigator.clipboard.writeText(code);
-    setVisibleTooltip(index.toString());
-    setTimeout(() => {
-      setVisibleTooltip(null);
-    }, 1000);
-  };
-
   return (
     <Card key={index}>
       <RefSiteImgDiv>
@@ -34,44 +23,17 @@ export const RefCard = ({
         <RefDescription>{refCard.description}</RefDescription>
         <RefCode>
           <RefCodeCopyButton
-            onClick={() => handleCopyClick(refCard.code, index)}
+            onClick={() => {
+              window.open(refCard.codeURL, "_blank");
+            }}
           >
-            {refCard.code}
-            <ButtonLabel>Click to copy</ButtonLabel>
+            CLICK TO CLAIM
           </RefCodeCopyButton>
-          {visibleTooltip === index.toString() && (
-            <Tooltip>Code copied</Tooltip>
-          )}
         </RefCode>
       </RefandCode>
     </Card>
   );
 };
-
-const ButtonLabel = styled.div`
-  position: absolute;
-  background-color: #222;
-  font-weight: bold;
-  top: 0;
-  font-size: 0.8rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
-
-const Tooltip = styled.div`
-  position: absolute;
-  background-color: #555;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  top: -40%;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  z-index: 99;
-  opacity: 1;
-  transition: opacity 0.3s;
-`;
 
 const RefSiteImgDiv = styled.div`
   width: 100%;
@@ -100,12 +62,14 @@ const RefandCode = styled.div`
 
 const RefCodeCopyButton = styled.button`
   background-color: #222;
+  font-size: 1.2rem;
+  font-weight: 600;
   border: 1px dashed orange;
   border-radius: 1rem;
   justify-self: center;
   width: 90%;
   height: 80%;
-  color: white;
+  color: orange;
   cursor: pointer;
   position: relative;
   &:hover {
@@ -124,10 +88,12 @@ const RefCode = styled.div`
 `;
 
 const RefDescription = styled.div`
+  text-transform: uppercase;
   background-color: #111;
   width: calc(100% - 1rem);
   text-align: center;
   padding: 0.5rem;
+  font-weight: 600;
   border: 1px solid rgba(0, 255, 255, 0.7);
 `;
 
@@ -139,7 +105,6 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  //
   box-shadow: 0px 2px 8px 0px rgba(0, 255, 255, 0.7);
 `;
 

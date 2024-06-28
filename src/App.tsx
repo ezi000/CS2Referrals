@@ -1,11 +1,17 @@
 import styled from "styled-components";
 import RefCodes from "./RefCodes";
+import { BrowserRouter } from "react-router-dom";
+import { NavBar } from "./NavBar";
+
 function App() {
   return (
     <>
-      <Body>
-        <RefCodes />
-      </Body>
+      <BrowserRouter>
+        <Body>
+          <NavBar />
+          <RefCodes />
+        </Body>
+      </BrowserRouter>
     </>
   );
 }

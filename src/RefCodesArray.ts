@@ -3,11 +3,12 @@ const categories = {
   trading: "trading",
   gambling: "gambling",
   selling: "selling",
+  market: "market",
   other: "other",
 };
 
 type RefCardType = {
-  code: string;
+  codeURL: string;
   category: string;
   description: string;
   img: string;
@@ -15,70 +16,112 @@ type RefCardType = {
 
 const RefCodesArray: RefCardType[] = [
   {
-    code: "CODE",
+    codeURL: "https://csgo-skins.com",
     category: categories.cases,
-    description: "DARMOWA SKRZYNKA",
-    img: "/casedrop.png",
-  },
-  {
-    code: "CODE",
-    category: categories.cases,
-    description: "0.3$ ZA DARMO",
-    img: "/csgolive.png",
-  },
-  {
-    code: "CODE",
-    category: categories.cases,
-    description: "5% DEPOZYT BONUS",
-    img: "/datdrop.png",
-  },
-  {
-    code: "CODE",
-    category: categories.cases,
-    description: "10% DEPOZYT BONUS I 0.7$ ZA DARMO",
-    img: "/hellcase.png",
-  },
-  {
-    code: "CODE",
-    category: categories.cases,
-    description: "1$ ZA DARMO",
-    img: "/farmskins.png",
-  },
-  {
-    code: "CODE",
-    category: categories.cases,
-    description: "5% DEPOZYT BONUS",
-    img: "/g4skins.svg",
-  },
-  {
-    code: "CODE",
-    category: categories.cases,
-    description: "5% DEPOZYT BONUS I 0.5$ ZA DARMO",
+    description: "$0.50 for free and 5% deposit bonus",
     img: "/csgoskins.png",
   },
   {
-    code: "CODE",
-    category: categories.gambling,
-    description: "0.25$ ZA DARMO",
-    img: "/wtfskins.png",
+    codeURL: "https://dmarket.com?ref=Sta3G1LmEH",
+    category: categories.market,
+    description: "???",
+    img: "/dmarket.svg",
   },
   {
-    code: "CODE",
-    category: categories.selling,
+    codeURL: "http://waxpeer.com/r/picek",
+    category: categories.market,
+    description: "???",
+    img: "/waxpeer.png",
+  },
+  {
+    codeURL: "https://shadowpay.com/?utm_campaign=u4jPTIdJ93l24aE",
+    category: categories.market,
     description: "???",
     img: "/shadowpay.svg",
   },
   {
-    code: "CODE",
-    category: categories.selling,
+    codeURL: "https://avan.market/?r=picek",
+    category: categories.market,
     description: "???",
-    img: "/bitskins.png",
+    img: "/avanmarket.svg",
   },
   {
-    code: "CODE",
+    codeURL: "https://tradeit.gg/?aff=PICEK",
+    category: categories.trading,
+    description: "Get $5 for Free in a balance and a 35% topup bonus",
+    img: "/tradeit.svg",
+  },
+  {
+    codeURL: "https://skinswap.com/r/picek",
     category: categories.trading,
     description: "???",
-    img: "/tradeit.svg",
+    img: "/skinswap.png",
+  },
+  {
+    codeURL: "https://swap.gg/?r=ROkmIEOQRK",
+    category: categories.trading,
+    description: "???",
+    img: "/swapgg.png",
+  },
+  {
+    codeURL: "https://rapidskins.com/a/picek",
+    category: categories.trading,
+    description: "???",
+    img: "/rapidskins.png",
+  },
+  {
+    codeURL: "https://skins.cash/user/ref/76561198163192791",
+    category: categories.selling,
+    description: "???",
+    img: "/skinscash.png",
+  },
+  {
+    codeURL: "https://lis-skins.ru/?rf=2305931",
+    category: categories.selling,
+    description: "???",
+    img: "/lisskins.svg",
+  },
+  {
+    codeURL: "https://skincashier.com/r/PICEK",
+    category: categories.selling,
+    description: "???",
+    img: "/skincashier.png",
+  },
+  {
+    codeURL: "https://avan.market/?r=",
+    category: categories.selling,
+    description: "???",
+    img: "/avanmarket.svg",
+  },
+  {
+    codeURL: "https://swap.gg/?r=ROkmIEOQRK",
+    category: categories.selling,
+    description: "???",
+    img: "/swapgg.png",
+  },
+  {
+    codeURL: "https://csgoempire.com/r/Picekk",
+    category: categories.gambling,
+    description: "FREE CASE + VERY GOOD PRICE CS2 SKINS IN WITHDRAW",
+    img: "/csgoempire.png",
+  },
+  {
+    codeURL: "https://csgobig.com/r/picekk",
+    category: categories.gambling,
+    description: "3 free cases + 5% deposit",
+    img: "/csgobig.png",
+  },
+  {
+    codeURL: "http://clash.gg/r/PICEKKK",
+    category: categories.gambling,
+    description: "Instant RakeBack + 5% deposit",
+    img: "/clashgg.png",
+  },
+  {
+    codeURL: "https://www.webshare.io/?referral_code=qm9lknmneh31",
+    category: categories.other,
+    description: "???",
+    img: "/webshare.svg",
   },
 ];
 
