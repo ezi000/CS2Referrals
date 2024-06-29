@@ -27,11 +27,11 @@ export const NavBar = () => {
     };
 
   const navItems = [
-    { to: "#cases", label: "CASES" },
     { to: "#market", label: "BUY & SELL SKINS" },
     { to: "#trading", label: "TRADE" },
     { to: "#selling", label: "CASH-OUT SKINS" },
     { to: "#gambling", label: "GAMBLE" },
+    { to: "#cases", label: "CASES" },
     //{ to: "#giveaways", label: "GIVEAWAYS" },
     { to: "#other", label: "OTHER" },
   ];
