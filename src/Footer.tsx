@@ -13,6 +13,7 @@ export const Footer = () => {
 const StyledFooter = styled.div`
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   padding: 0.5rem 0 0.5rem 0;
   height: 3rem;
