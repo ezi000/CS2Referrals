@@ -2,6 +2,7 @@ import styled from "styled-components";
 import RefCodes from "./RefCodes";
 import { BrowserRouter } from "react-router-dom";
 import { NavBar } from "./NavBar";
+import { Footer } from "./Footer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Body>
           <NavBar />
           <RefCodes />
+          <Footer />
         </Body>
       </BrowserRouter>
     </>

@@ -32,6 +32,7 @@ export const NavBar = () => {
     { to: "#trading", label: "TRADE" },
     { to: "#selling", label: "CASH-OUT SKINS" },
     { to: "#gambling", label: "GAMBLE" },
+    //{ to: "#giveaways", label: "GIVEAWAYS" },
     { to: "#other", label: "OTHER" },
   ];
 
@@ -94,7 +95,8 @@ export const NavBar = () => {
 const HamburguerMenuItems = styled.div`
   color: rgba(0, 255, 255, 0.7);
   padding: 0.5rem;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
 `;
 
 const Nav = styled.div`
@@ -145,6 +147,7 @@ const StyledNavBar = styled.div`
 
 const StyledButton = styled(Button)`
   && {
+    font-family: "Oswald", sans-serif;
     font-size: 1rem;
     font-weight: 600;
     color: rgba(0, 255, 255, 0.7);

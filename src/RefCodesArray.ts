@@ -4,6 +4,7 @@ const categories = {
   gambling: "gambling",
   selling: "selling",
   market: "market",
+  giveaways: "giveaways",
   other: "other",
 };
 

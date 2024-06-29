@@ -55,8 +55,6 @@ const RefandCode = styled.div`
   height: 50%;
   flex-direction: column;
   align-items: center;
-  /* border-right: 1px solid rgba(0, 255, 255, 0.7);
-  border-left: 1px solid rgba(0, 255, 255, 0.7); */
   border-radius: 1rem;
 `;
 

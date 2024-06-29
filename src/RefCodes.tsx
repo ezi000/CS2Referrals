@@ -34,6 +34,7 @@ const RefCodes = () => {
     cases: "📦 OPEN CASES 📦",
     market: "💰 BUY & SELL SKINS 💰",
     other: "🌐 OTHER SITES 🌐",
+    giveaways: "🎁 GIVEAWAYS 🎁",
     selling: "💵 CASH-OUT SKINS 💵",
   };
 
@@ -63,6 +64,7 @@ const Body = styled.div`
 `;
 
 const SiteCategoryHeader = styled.h1`
+  font-family: "Oswald", sans-serif;
   color: white;
   font-size: 3rem;
   margin: 0;
