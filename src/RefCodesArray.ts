@@ -120,7 +120,7 @@ const RefCodesArray: RefCardType[] = [
   {
     codeURL: "https://www.webshare.io/?referral_code=qm9lknmneh31",
     category: categories.other,
-    description: "???",
+    description: "10 proxies for free",
     img: "/webshare.svg",
   },
 ];
