@@ -24,36 +24,6 @@ const RefCodesArray: RefCardType[] = [
     img: "/dmarket.svg",
   },
   {
-    codeURL: "https://dmarket.com?ref=Sta3G1LmEH",
-    category: categories.market,
-    description: "Trade, Market and Instant Sell",
-    img: "/dmarket.svg",
-  },
-  {
-    codeURL: "https://dmarket.com?ref=Sta3G1LmEH",
-    category: categories.market,
-    description: "Trade, Market and Instant Sell",
-    img: "/dmarket.svg",
-  },
-  {
-    codeURL: "https://dmarket.com?ref=Sta3G1LmEH",
-    category: categories.market,
-    description: "Trade, Market and Instant Sell",
-    img: "/dmarket.svg",
-  },
-  {
-    codeURL: "https://dmarket.com?ref=Sta3G1LmEH",
-    category: categories.market,
-    description: "Trade, Market and Instant Sell",
-    img: "/dmarket.svg",
-  },
-  {
-    codeURL: "https://dmarket.com?ref=Sta3G1LmEH",
-    category: categories.market,
-    description: "Trade, Market and Instant Sell",
-    img: "/dmarket.svg",
-  },
-  {
     codeURL: "http://waxpeer.com/r/picek",
     category: categories.market,
     description: "TOP DISCOUNTS",
