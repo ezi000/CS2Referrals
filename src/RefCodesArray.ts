@@ -18,6 +18,12 @@ type RefCardType = {
 const RefCodesArray: RefCardType[] = [
   {
     codeURL: "https://dmarket.com?ref=Sta3G1LmEH",
+    category: categories.other,
+    description: "Trade, Market and Instant Sell",
+    img: "/dmarket.svg",
+  },
+  {
+    codeURL: "https://dmarket.com?ref=Sta3G1LmEH",
     category: categories.market,
     description: "Trade, Market and Instant Sell",
     img: "/dmarket.svg",
