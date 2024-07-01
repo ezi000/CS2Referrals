@@ -26,7 +26,7 @@ const RefCodesArray: RefCardType[] = [
   {
     codeURL: "http://waxpeer.com/r/picek",
     category: categories.market,
-    description: "TOP DISCOUNTS         CS2 RUST TF2",
+    description: "TOP DISCOUNTS   &nbsp;&nbsp;&nbsp;      CS2 RUST TF2",
     img: "/waxpeer.png",
   },
   {
