@@ -20,25 +20,25 @@ const RefCodesArray: RefCardType[] = [
   {
     codeURL: "https://dmarket.com?ref=Sta3G1LmEH",
     category: categories.market,
-    description: "Trade, Market and Instant Sell",
+    description: "CS2 DOTA TF2 RUST",
     img: "/dmarket.svg",
   },
   {
     codeURL: "http://waxpeer.com/r/picek",
     category: categories.market,
-    description: "TOP DISCOUNTS   &nbsp;&nbsp;&nbsp;      CS2 RUST TF2",
+    description: "TOP DISCOUNTS CS2 RUST TF2",
     img: "/waxpeer.png",
   },
   {
     codeURL: "https://shadowpay.com/?utm_campaign=u4jPTIdJ93l24aE",
     category: categories.market,
-    description: "TOP DISCOUNTS         CS2 DOTA2 RUST",
+    description: "TOP DISCOUNTS CS2 DOTA2 RUST",
     img: "/shadowpay.svg",
   },
   {
     codeURL: "https://white.market/invite/b72f80b75f28f99f",
     category: categories.market,
-    description: "FACEIT & ESL Partner CS2 LARGE MARKETPLACE    ",
+    description: "CS2 LARGE MARKETPLACE    ",
     img: "/whitemarket.png",
   },
   {
