@@ -62,7 +62,7 @@ const RefCodesArray: RefCardType[] = [
   {
     codeURL: "https://rapidskins.com/a/picek",
     category: categories.trading,
-    description: "Weekly (50$) and monthly (250$) leaderboard for 1st place ",
+    description: "Weekly (50$) and monthly (250$) leaderboard",
     img: "/rapidskins.png",
   },
   {
@@ -98,13 +98,13 @@ const RefCodesArray: RefCardType[] = [
   {
     codeURL: "https://csgobig.com/r/picekk",
     category: categories.gambling,
-    description: "3 free cases + 5% deposit",
+    description: "3 free cases + 5% deposit 10,000 Daily Race",
     img: "/csgobig.png",
   },
   {
     codeURL: "http://clash.gg/r/PICEKKK",
     category: categories.gambling,
-    description: "Instant RakeBack + 5% deposit",
+    description: "RakeBack + 5% deposit and daily case",
     img: "/clashgg.png",
   },
   {
