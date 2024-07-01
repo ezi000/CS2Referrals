@@ -50,19 +50,19 @@ const RefCodesArray: RefCardType[] = [
   {
     codeURL: "https://skinswap.com/r/picek",
     category: categories.trading,
-    description: "Trade, Market and Instant Sell",
+    description: "FREE case up to 150$ for first trade 10$",
     img: "/skinswap.png",
   },
   {
     codeURL: "https://swap.gg/?r=ROkmIEOQRK",
     category: categories.trading,
-    description: "30% Deposit Bonus",
+    description: "30% Deposit Bonus and Screenshot Tool",
     img: "/swapgg.png",
   },
   {
     codeURL: "https://rapidskins.com/a/picek",
     category: categories.trading,
-    description: "Trade, Market and Instant Sell",
+    description: "Weekly (50$) and monthly (250$) leaderboard for 1st place ",
     img: "/rapidskins.png",
   },
   {
