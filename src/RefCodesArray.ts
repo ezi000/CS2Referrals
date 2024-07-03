@@ -141,7 +141,7 @@ const RefCodesArray: RefCardType[] = [
   {
     codeURL: "https://ruststake.com/r/picek",
     category: categories.rust,
-    description: "0,5$ free and Free case",
+    description: "0,5$ free and 0.1 EVRY 30 MINUTES",
     img: "/ruststake.png",
   },
   {
