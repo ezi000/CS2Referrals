@@ -6,6 +6,7 @@ const categories = {
   market: "market",
   giveaways: "giveaways",
   other: "other",
+  rust: "rust",
 };
 
 type RefCardType = {
@@ -135,6 +136,12 @@ const RefCodesArray: RefCardType[] = [
     codeURL: "https://key-drop.com/?code=T7VSPEAM",
     category: categories.cases,
     description: "0,5$ FREE + 10% deposit",
+    img: "/keydrop.png",
+  },
+  {
+    codeURL: "https://ruststake.com/r/picek",
+    category: categories.rust,
+    description: "0,5$ free",
     img: "/keydrop.png",
   },
   {
