@@ -145,6 +145,24 @@ const RefCodesArray: RefCardType[] = [
     img: "/ruststake.png",
   },
   {
+    codeURL: "rustclash.com/r/PICEK",
+    category: categories.rust,
+    description: "RAKEBACK +5% DEPOSIT BONUS and daily case",
+    img: "/rustclash.jpg",
+  },
+  {
+    codeURL: "https://rustcasino.com/?r=picek",
+    category: categories.rust,
+    description: "3 free cases and a +10% deposit bonus.",
+    img: "/rustcasino.webp",
+  },
+  {
+    codeURL: "https://bountystars.com/?r=picek",
+    category: categories.rust,
+    description: "Referrals receive 50% deposit bonus and 0.50$ free bonus ",
+    img: "/bountystars.svg",
+  },
+  {
     codeURL: "https://www.webshare.io/?referral_code=qm9lknmneh31",
     category: categories.other,
     description: "10 proxies for free",
