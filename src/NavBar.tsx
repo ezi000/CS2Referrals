@@ -33,6 +33,7 @@ export const NavBar = () => {
     { to: "#gambling", label: "GAMBLE" },
     { to: "#cases", label: "CASES" },
     //{ to: "#giveaways", label: "GIVEAWAYS" },
+    { to: "#rust", label: "RUST" },
     { to: "#other", label: "OTHER" },
     { to: "https://discord.gg/sBMa9aanSr", label: "DISCORD CHANNEL" },
   ];
