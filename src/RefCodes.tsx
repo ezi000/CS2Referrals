@@ -36,6 +36,7 @@ const RefCodes = () => {
     other: "🌐 OTHER SITES 🌐",
     giveaways: "🎁 GIVEAWAYS 🎁",
     selling: "💵 CASH-OUT SKINS 💵",
+    rust: "🔨🛠️ RUST 🔨🛠️",
   };
 
   return (
