@@ -141,7 +141,7 @@ const RefCodesArray: RefCardType[] = [
   {
     codeURL: "https://ruststake.com/r/picek",
     category: categories.rust,
-    description: "0,5$ free",
+    description: "0,5$ free and Free case",
     img: "/ruststake.png",
   },
   {
@@ -153,13 +153,13 @@ const RefCodesArray: RefCardType[] = [
   {
     codeURL: "https://rustcasino.com/?r=picek",
     category: categories.rust,
-    description: "3 free cases and a +10% deposit bonus.",
+    description: "3 free cases and +10% deposit bonus",
     img: "/rustcasino.webp",
   },
   {
     codeURL: "https://bountystars.com/?r=picek",
     category: categories.rust,
-    description: "Referrals receive 50% deposit bonus and 0.50$ free bonus ",
+    description: "50% deposit bonus and 0.50$ free bonus ",
     img: "/bountystars.svg",
   },
   {
