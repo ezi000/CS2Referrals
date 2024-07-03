@@ -148,7 +148,7 @@ const RefCodesArray: RefCardType[] = [
     codeURL: "https://rustclash.com/r/PICEK",
     category: categories.rust,
     description: "RAKEBACK +5% DEPOSIT BONUS and daily case",
-    img: "/rustclash.jpg",
+    img: "/rustclash.png",
   },
   {
     codeURL: "https://rustcasino.com/?r=picek",
