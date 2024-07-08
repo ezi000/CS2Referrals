@@ -17,7 +17,12 @@ type RefCardType = {
 };
 
 const RefCodesArray: RefCardType[] = [
-  
+  {
+    codeURL: "https://www.haloskins.com/market?channelCode=picek",
+    category: categories.market,
+    description: "CS2 TOP 3% FEE MARKETPLACE   ",
+    img: "/haloskins.png",
+  },
   {
     codeURL: "https://dmarket.com?ref=Sta3G1LmEH",
     category: categories.market,
@@ -35,12 +40,6 @@ const RefCodesArray: RefCardType[] = [
     category: categories.market,
     description: "TOP DISCOUNTS CS2 DOTA2 RUST",
     img: "/shadowpay.svg",
-  },
-  {
-    codeURL: "https://white.market/invite/b72f80b75f28f99f",
-    category: categories.market,
-    description: "CS2 LARGE MARKETPLACE    ",
-    img: "/whitemarket.png",
   },
   {
     codeURL: "https://tradeit.gg/?aff=PICEK",
